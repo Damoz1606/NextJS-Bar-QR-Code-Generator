@@ -1,0 +1,25 @@
+.card {
+    width: 605px;
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 30px 25px;
+    box-shadow: 0 12px 35px rgba(219, 219, 219, 0.1);
+}
+
+.card .card_header,
+.card .card_body,
+.card .card_footer {
+    margin: 1rem;
+}
+
+.card .card_header {
+    margin-top: 0;
+    font-size: 1.25rem;
+    text-align: left;
+    font-weight: 700;
+}
+
+.card .card_body{
+    min-height: 75px;
+    transition: height .3s ease-in;
+}

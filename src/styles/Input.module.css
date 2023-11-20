@@ -1,0 +1,47 @@
+.form_group {
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    --border-height: 1px;
+    --border-radius-span: 30px;
+}
+
+input.text {
+    width: 100%;
+    padding: 0.5rem 0.5rem;
+    border: none;
+}
+
+.form_group span.line {
+    position: absolute;
+    width: 100%;
+    height: var(--border-height);
+    bottom: 0;
+    left: 0;
+    background-color: var(--foreground-hex);
+
+    border-radius: var(--border-radius-span);
+
+    transition: all .3s ease-in;
+}
+
+.form_group span.line::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: var(--border-height);
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-color-hex);
+    transform-origin: center;
+    transform: scaleX(0);
+
+    border-radius: var(--border-radius-span);
+
+    transition: all .3s ease-in;
+}
+
+input.text:focus~span.line::before {
+    transform: scaleX(1);
+}
